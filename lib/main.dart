@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meals_app_flutter/screens/category_meals_screen.dart';
 import 'package:meals_app_flutter/screens/category_screen.dart';
 
 void main() => runApp(MyApp());
@@ -8,7 +9,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Daily Meals',
-      home: CategoryScreen(),
       theme: ThemeData(
         primarySwatch: Colors.pink,
         accentColor: Colors.amber,
@@ -28,6 +28,10 @@ class MyApp extends StatelessWidget {
               ),
             ),
       ),
+      home: CategoryScreen(),
+      routes: {
+        CategoryMealsScreen.routeName: (context) => CategoryMealsScreen(),
+      },
     );
   }
 }
