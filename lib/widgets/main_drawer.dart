@@ -46,6 +46,10 @@ class MainDrawer extends StatelessWidget {
               Navigator.of(context).pushReplacementNamed('/');
             },
           ),
+          Padding(
+            padding: const EdgeInsets.only(left: 70),
+            child: Divider(thickness: 2),
+          ),
           _buildListTile(
             'Filters',
             Icons.settings,
@@ -54,6 +58,10 @@ class MainDrawer extends StatelessWidget {
                 FiltersScreen.routeName,
               );
             },
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 70),
+            child: Divider(thickness: 2),
           ),
         ],
       ),
